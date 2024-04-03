@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&display=swap');
 /* Box sizing rules */
 *,
 *::before,
@@ -11,8 +12,8 @@
 /* Prevent font size inflation */
 html {
 	scroll-behavior: smooth;
-	font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji';
+	font-family: Lemonada, system-ui, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
@@ -46,17 +47,6 @@ ol[role='list'] {
 body {
 	min-height: 100vh;
 	line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-	line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
@@ -98,9 +88,82 @@ textarea:not([rows]) {
 :target {
 	scroll-margin-block: 5ex;
 }
-
-
-.header {
-	height: 20rem;
+header {
+	background-color: #f6eee1; /* Set background color */
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.125rem;
+	padding-inline: 5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.7rem;
+}
+
+.title {
+	margin-top: -4%;
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+.navigation ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+.navigation ul li {
+	margin-left: 2rem;
+}
+a {
+	text-decoration: none;
+}
+/* Style main content */
+
+.main-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-left: 19rem;
+}
+
+.recipe {
+	width: 20ch;
+	margin-bottom: 1.5rem;
+}
+
+.recipe img {
+	max-width: 100%;
+	height: auto;
+}
+
+.recipe h3 {
+	margin-top: 0.5rem;
+}
+
+.recipe p {
+	color: #666;
+}
+
+.recipe a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
+
+.recipe__image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+/* Style footer */
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	bottom: 0;
+	width: 100%;
+	position: fixed;
 }
