@@ -3,13 +3,23 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: calc(1em + 0.5rem);
 }
 
 /* Prevent font size inflation */
 html {
+	scroll-behavior: smooth;
+	font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji';
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
+	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	-moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+	tab-size: 4; /* 3 */
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -87,4 +97,10 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
 	scroll-margin-block: 5ex;
+}
+
+
+.header {
+	height: 20rem;
+	width: 100%;
 }
