@@ -2,7 +2,6 @@
 window.onscroll = function () {
 	const header = document.getElementById('header');
 	const scrollPosition = window.scrollY; // Get scroll position
-	console.log(scrollPosition);
 	const hideAfter = 500; // Pixels to scroll before hiding
 
 	if (scrollPosition > hideAfter) {

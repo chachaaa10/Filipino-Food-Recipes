@@ -36,12 +36,14 @@ header img {
 }
 
 a {
-	color: #fff;
-	text-decoration: none;
 	padding: 0 15px;
 }
 
-a:hover {
+ul a {
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+ul a:hover {
 	background-color: #dddddd5d;
 	color: #000;
 }
